@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
   <head>
     <meta charset="utf-8">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -43,21 +43,21 @@
             <p>Para calcular a força entre dois corpos, use os controles a seguir:</p>
             <div class="controles">
               <label>
-                \(G\): <input type="number" id="constante" value="6.67e-11" disabled>
+                \(G\) (\(\frac{m^3}{kg*s^2}\)):<input type="number" id="constante" value="6.67e-11" disabled>
               </label>
               <label>
-                \(M_1\): <input type="number" id="massa1">
+                \(M_1\) (kg): <input type="number" id="massa1">
               </label>
               <label>
-                \(M_2\): <input type="number" id="massa2">
+                \(M_2\) (kg): <input type="number" id="massa2">
               </label>
               <label>
-                \(d\): <input type="number" id="distancia">
+                \(d\) (m): <input type="number" id="distancia">
               </label>
             </div>
             <div class="controles">
               <label>
-                Resultado: <input type="number" id="resultado" disabled>
+                Resultado  (Newtons): <input type="number" id="resultado" disabled>
               </label>
               <button id="calcular">Calcular \(F_{grav}\)</button>
             </div>
@@ -77,7 +77,8 @@
           as imagens, bolar um mapa detalhado de sua superfície.
         </p>
         <div id="galeria">
-          <img src="http://fegemo.github.io/cefet-web/images/osiris/modelo-artistico-da-sonda.webp" id="slide">
+          <img src="http://fegemo.github.io/cefet-web/images/osiris/modelo-artistico-da-sonda.webp" id="slide"
+               alt="Imagem computadorizada da sonda espacial Osiris-Rex, asteroide Bennu na parte inferior ao fundo">
           <button id="anterior" class="navegar">Anterior</button>
           <button id="proximo" class="navegar">Próximo</button>
         </div>
@@ -165,6 +166,6 @@
     <!-- inclua os arquivos dos exercícios aqui: -->
 
 
-
+  <script src="exercicio1.js"></script>
   </body>
 </html>
