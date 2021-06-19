@@ -1,6 +1,3 @@
-// Faça o exercício da GALERIA DE IMAGENS aqui
-// Este arquivo AINDA NÃO ESTÁ INCLUÍDO no arquivo HTML
-
 const servidorDasImagens = 'https://fegemo.github.io/cefet-web/images/osiris';
 const imagens = [
     {
@@ -48,3 +45,25 @@ const imagens = [
     }
   ];
 
+let imagem_atual = 0;
+
+function atualiza_imagem(){
+    let image = document.querySelector('#slide');
+    image.src = servidorDasImagens + '/' + imagens[imagem_atual].arquivo;
+    image.alt = imagens[imagem_atual].descricao;
+    // console.log(imagem_atual);
+}
+
+function clica_anterior(){
+    imagem_atual = (((imagem_atual - 1) % imagens.length) + imagens.length) % imagens.length;
+    atualiza_imagem();
+}
+
+document.querySelector('#anterior').addEventListener('click', clica_anterior);
+
+function clica_proximo(){
+    imagem_atual = (((imagem_atual + 1) % imagens.length) + imagens.length) % imagens.length;
+    atualiza_imagem();
+}
+
+document.querySelector('#proximo').addEventListener('click', clica_proximo);
